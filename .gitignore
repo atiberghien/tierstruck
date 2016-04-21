@@ -4,4 +4,4 @@ project.db
 *.pyc
 __pycache__
 *.css
-
+.sass-cache
