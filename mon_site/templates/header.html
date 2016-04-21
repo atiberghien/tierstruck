@@ -1,4 +1,4 @@
-{% load cms_tags sekizai_tags %}
+{% load cms_tags menu_tags sekizai_tags %}
 
 <div class="row">
   <div class="small-12 column ban">
@@ -9,8 +9,7 @@
 <div class="top-bar">
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
+      {% show_menu %}
     </ul>
   </div>
 
