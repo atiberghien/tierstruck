@@ -7,16 +7,74 @@
 
 <main>
 
-  <div class="row padding-section">
+  <div class="row text-center padding-section">
     <div class="large-5 column">
       <img src="/static/images/map-france.png" alt="carte-france"/>
     </div>
-    <div class="large-7 column">
+    <div class="large-7 text-justify column">
       <h1>LE TIERS-TRUCK</h1>
       <p class="sous-titre">CONCEPT INNOVANT</p>
       <p class="texte-article">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="large-6 medium-12 small-12 column">
+      <!-- Code embed Twitter -->
+      <a class="twitter-timeline" href="https://twitter.com/TiersTruck" data-widget-id="727402365456896000">Tweets de @TiersTruck</a>
+    </div>
+    <div class="large-6 medium-12 small-12 column">
+      <!-- Code embed Facebook -->
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      </script>
+      <div class="fb-page" data-href="https://www.facebook.com/TiersTruck/?fref=ts" data-tabs="timeline" data-width="520" data-height="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/TiersTruck/?fref=ts"><a href="https://www.facebook.com/TiersTruck/?fref=ts">Tiers-Truck : Modes de vie durables à partager</a></blockquote></div></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 column">
+      <h2 id="title-contact">Contactez-moi !</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 medium-12 large-6 column">
+      <form data-abide>
+        <div class="row">
+          <div class="medium-12 columns">
+              <input type="text" placeholder="Nom...">
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-12 columns">
+              <input type="text" placeholder="Prénom...">
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-12 columns">
+              <input type="email" required placeholder="Email..." >
+              <span class="form-error">
+                Adresse Email invalide !
+              </span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="small-12 medium-12 large-6 column">
+      <textarea placeholder="Message..."></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-2 small-offset-10 column">
+      <button id="button-submit" type="button" class="secondary button">Envoyer</button>
     </div>
   </div>
 
