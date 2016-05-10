@@ -1,3 +1,35 @@
-#mapid {
-  height: 180px;
+.section-title h1 {
+  margin-top: 3rem;
+}
+
+.section-map {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  h2 {
+    padding-bottom: 1rem;
+  }
+  h2 .fa-bus {
+    font-size: 2rem;
+  }
+  #p-lieu {
+    margin-top: 4rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  #mapid {
+    height: 380px;
+  }
+}
+
+.section-gallery {
+  img {
+    margin-top: 1.5rem;
+  }
+  h2 {
+    padding-bottom: 1rem;
+  }
+  h2 .fa-bus {
+    font-size: 2rem;
+  }
 }
