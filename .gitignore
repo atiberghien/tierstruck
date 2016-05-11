@@ -1,6 +1,5 @@
 bower_components
 .DS_Store
-project.db
 *.pyc
 __pycache__
 *.css

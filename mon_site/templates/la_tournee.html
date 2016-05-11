@@ -7,19 +7,22 @@
 
 <section class="row text-center section-title">
   <div class="small-12 column">
-    <h1>Juin 2016</h1>
+    {% placeholder "titre-la-tournee" %}<!-- Titre de la page La Tournée en h1 -->
   </div>
 </section>
 
 <section class="row text-center section-map">
   <div class="large-6 medium-6 small-12 column">
-    <h2 class="text-justify"><i class="fa fa-bus" aria-hidden="true"></i>  La tournée</h2>
+    <div class="text-justify">
+      {% placeholder "sous-titre-la-tournee" %}<!-- Sous-titre de la page la Tournée en h2 -->
+    </div>
+
     <div id="mapid"></div>
   </div>
   <div class="large-6 medium-6 small-12 column text-justify">
-    <p id="p-lieu">Lieu : </p>
-    <p>Date : </p>
-    <p>Activités proposées : </p>
+    <h3 id="p-lieu">Lieux et Dates : </h3>{% placeholder "lieux-dates-de-la-tournee" %}<!-- Lieux et Dates de la tournee en p -->
+    <h3>Activités proposées : </h3>
+    {% placeholder "activites-de-la-tournee" %}<!-- Activités de la tournee en p -->
   </div>
 </section>
 

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+
+<section class="row text-center section-title">
+  <div class="small-12 column">
+    {% placeholder  "titre-reseau" %}<!-- Titre de la page Réseau en h1 -->
+  </div>
+</section>
+
+
+
+
+{% endblock %}
