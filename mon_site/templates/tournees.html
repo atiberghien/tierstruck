@@ -14,13 +14,21 @@
 <section class="row text-center section-map">
   <div class="large-6 medium-6 small-12 column">
     <div class="text-justify">
-      {% placeholder "sous-titre-les-tournees" %}<!-- Sous-titre de la page les Tournées en h2 -->
+      {% placeholder "sous-titre-la-tournee" %}<!-- Sous-titre de la page les Tournées en h2 -->
     </div>
-
     <div id="mapid"></div>
   </div>
   <div class="large-6 medium-6 small-12 column text-justify">
-    <h3 id="p-lieu">Lieux et Dates : </h3>{% placeholder "lieux-dates-de-la-tournee" %}<!-- Lieux et Dates de la tournee en p -->
+    <h3 id="p-lieu">Lieux et Dates : </h3>
+    <div class="row">
+      <div class="large-6 column">
+        {% placeholder "lieux-dates-de-la-tournee-col1" %}<!-- Lieux et Dates de la tournee en p -->
+      </div>
+      <div class="large-6 column">
+        {% placeholder "lieux-dates-de-la-tournee-col2" %}<!-- Lieux et Dates de la tournee en p -->
+      </div>
+    </div>
+
     <h3>Activités proposées : </h3>
     {% placeholder "activites-de-la-tournee" %}<!-- Activités de la tournee en p -->
   </div>
