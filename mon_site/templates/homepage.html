@@ -6,54 +6,14 @@
 {% block content %}
 
 <main>
-
   <div class="row text-center section-short-presentation">
-    <div class="large-5 column">
-      <img src="/static/images/map-france.png" alt="carte-france"/>
+    <div class="large-6 column">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rgrtL8S7mo8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
     </div>
-    <div id="the_presentation "class="large-7 text-justify column">
-      {% placeholder  "presentation-accueil" %}<!-- Présentaion de l'accueil en p -->
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="small-12 column">
-      <h2 id="title-contact">Contactez-moi !</h2>
+    <div id="the_presentation "class="large-6 text-justify column">
+      {% placeholder  "presentation-accueil" %}
     </div>
   </div>
-  <div class="row">
-    <div class="small-12 medium-12 large-6 column">
-      <form data-abide>
-        <div class="row">
-          <div class="medium-12 columns">
-              <input type="text" placeholder="Nom...">
-          </div>
-        </div>
-        <div class="row">
-          <div class="medium-12 columns">
-              <input type="text" placeholder="Prénom...">
-          </div>
-        </div>
-        <div class="row">
-          <div class="medium-12 columns">
-              <input type="email" required placeholder="Email..." >
-              <span class="form-error">
-                Adresse Email invalide !
-              </span>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="small-12 medium-12 large-6 column">
-      <textarea placeholder="Message..."></textarea>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-2 small-offset-10 column">
-      <button id="button-submit" type="button" class="secondary button">Envoyer</button>
-    </div>
-  </div>
-
 </main>
 
 {% endblock content %}

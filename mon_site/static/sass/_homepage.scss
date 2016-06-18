@@ -10,14 +10,27 @@
   font-size: 1.8rem;
 }
 
-textarea {
-  height: 150px;
-}
+.contact-form {
+    textarea {
+        height: 210px !important;
+    }
+    input[type=text], input[type=email]{
+        height: 50px !important;
+    }
+    input[type=submit] {
+        height: 70px !important;
+        width: 100%;
+        font-family: $font-tierstruck;
+        font-size: 35px;
+        background-color: $black-tierstruck;
+        color: white;
 
-#button-submit {
-  float: right;
-}
+        :hover {
+            color: $white-hover;
+        }
+    }
+    #title-contact {
+        margin-top: 3rem;
+    }
 
-#title-contact {
-  margin-top: 3rem;
 }

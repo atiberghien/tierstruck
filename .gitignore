@@ -4,3 +4,6 @@ bower_components
 __pycache__
 *.css
 .sass-cache
+media
+/mon_site/site_settings.py
+/mon_site/static/css

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+
+<section class="row text-center section-title">
+  <div class="small-12 column">
+    {% placeholder  "titre" %}
+  </div>
+</section>
+<div class="row">
+  <div class="small-12 large-4 medium-12 column">
+    {% placeholder "col1" %}
+  </div>
+  <div class="small-12 large-4 medium-12 column">
+    {% placeholder "col2" %}
+  </div>
+  <div class="small-12 large-4 medium-12 column">
+    {% placeholder "col3" %}
+  </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+.leaflet-control-attribution, .leaflet-routing-container {
+    display: none;
+    visibility: hidden;
+}
+.leaflet-control-zoom, .leaflet-control-scale-line {
+    display: none;
+    visibility: hidden;
+}
+
+.ongoing-tours {
+    .leaflet-container-default {
+        min-height: 450px;
+    }
+    p {
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.passed-tours {
+    .leaflet-container-default {
+        width: 250px;
+        min-height: 250px;
+    }
+
+}
+
+.tour-map {
+    .leaflet-container-default {
+        min-height: 370px;
+    }
+}

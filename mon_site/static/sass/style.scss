@@ -1,3 +1,7 @@
+$black-tierstruck: #3E4144;
+$white-hover : #e4e3e5 ;
+$font-tierstruck : 'Yanone Kaffeesatz', sans-serif;
+
 @import "footer";
 @import "header";
 @import "homepage";
@@ -7,9 +11,10 @@
 @import "tierstrucker";
 @import "tournees";
 
+
 p, h1, h2, h3, a {
-  color: #3e4144;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: $black-tierstruck;
+  font-family: $font-tierstruck;
 }
 
 h1 {

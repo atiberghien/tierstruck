@@ -3,13 +3,14 @@
 }
 
 .top-bar {
-  background-color: #3E4144;
+  background-color: $black-tierstruck;
   ul {
-    background-color: #3e4144;
+    background-color: $black-tierstruck;
     margin-top: 0.3rem;
     li a {
       color: white;
-      font-size: 1.4rem;
+      font-size: 2rem;
+      padding: 1rem 2rem;
     }
     li a:hover {
       color: #e4e3e5;

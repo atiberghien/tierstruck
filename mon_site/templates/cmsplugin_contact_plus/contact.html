@@ -1,0 +1,35 @@
+{% load placeholder_tag %}
+<div class="row">
+  <div class="small-12 column">
+    <h2 id="title-contact">{{contact.title}}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 medium-12 large-12 column">
+{% if form %}
+    {% if form.is_multipart %}
+        <form enctype="multipart/form-data" method="POST" action="" data-abide>
+    {% else %}
+       <form method="POST" action="" data-abide>
+    {% endif %}
+	{% csrf_token %}
+        <div class="medium-6 columns">
+            {{form.message|html_placeholder:"Votre message..."}}
+        </div>
+        <div class="medium-6 columns">
+            <div class="medium-12 columns">
+                {{form.name|html_placeholder:"Votre nom..."}}
+                {{form.email|html_placeholder:"Votre adresse email..."}}
+            </div>
+            <div class="medium-7 columns">
+                {{form.captcha}}
+            </div>
+            <div class="medium-5 columns">
+                <input type="submit" name="contact_plus_form_{{ contact.id }}" {% if contact.submit %} value="{{ contact.submit }}"{% endif %} />
+            </div>
+        </div>
+    </div>
+	</form>
+{% else %}
+	{{ contact.thanks|safe }}
+{% endif %}
