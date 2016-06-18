@@ -31,7 +31,6 @@ easy-thumbnails==2.3
 html5lib==0.9999999
 jsonfield==1.0.3
 Pillow==3.2.0
-pkg-resources==0.0.0
 psycopg2==2.6.1
 pytz==2016.4
 six==1.10.0
