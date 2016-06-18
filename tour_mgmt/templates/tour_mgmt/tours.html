@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load leaflet_tags%}
+
+
+{% block content %}
+<section class="row text-center section-title">
+  <div class="small-12 column">
+      <h1>LES TOURNEES</h1>
+  </div>
+</section>
+
+{% if ongoing_tours.count %}
+<section class="row text-center section-map ongoing-tours">
+  {% for tour in ongoing_tours %}
+  <div class="large-12 column">
+      <div class="text-justify">
+          <h2>La tournée en cours ({{tour.stages.count}} étapes | <span id="distance_{{tour.id}}"></span> km)</h2>
+      </div>
+  </div>
+  <div class="large-6 medium-6 small-12 column ongoing-tour">
+    {% with id=tour.id|stringformat:"s" %}
+    {% with mapid="map-"|add:id %}
+    {% with callback_name="window.map_init_basic_"|add:id %}
+        {% leaflet_map mapid callback=callback_name %}
+    {% endwith %}
+    {% endwith %}
+    {% endwith %}
+  </div>
+  <div class="large-6 medium-6 small-12 column text-justify">
+    <h3>Lieux et Dates :</h3>
+    <div class="row">
+      <div class="large-6 column">
+          {% for stage in tour.stages.all %}
+            {% if forloop.counter0 == 5 %}
+            </div><div class="large-6 column">
+            {% endif %}
+            <p>{{stage.name}} : {{stage.begin_date}}</p>
+          {% endfor %}
+      </div>
+    </div>
+    <h3>Activités de la tournée </h3>
+    <div class="row">
+      <div class="large-12 column">
+        {{tour.desc|safe}}
+
+        <a href="{% url 'tour-detail' tour.slug %}"><i class="fa fa-search" aria-hidden="true">Voir le détail de la tournée</i></a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if passed_tours.count %}
+<section class="section-gallery passed-tours">
+  <div class="row">
+    <div class="small-12 column">
+      <div class="text-justify">
+        <h2>Les tournées passées</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row small-up-2 large-up-4 ">
+  {% for tour in passed_tours %}
+    <div class="column text-center">
+        {% with id=tour.id|stringformat:"s" %}
+        {% with mapid="map-"|add:id %}
+        {% with callback_name="window.map_init_basic_"|add:id %}
+            {% leaflet_map mapid callback=callback_name settings_overrides=passed_map_settings%}
+        {% endwith %}
+        {% endwith %}
+        {% endwith %}
+      <h3 class="text-center">
+          <a href="{% url 'tour-detail' tour.slug %}"> {{tour.name}}</a>
+      </h3>
+      <h4 class="text-center">
+          <a href="{% url 'tour-detail' tour.slug %}">({{tour.stages.count}} étapes | <span id="distance_{{tour.id}}"></span> km)</a>
+      </h4>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}
+
+{% block extra_script %}
+<script type="text/javascript">
+    {% for tour in ongoing_tours %}
+        {% include 'tour_mgmt/map_init_callback.js' %}
+    {% endfor %}
+    {% for tour in passed_tours %}
+        {% include 'tour_mgmt/map_init_callback.js' %}
+    {% endfor %}
+</script>
+{% endblock extra_script %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load leaflet_tags placeholder_tag%}
+
+{% block content %}
+
+<section class="row text-center section-title">
+  <div class="small-12 column">
+    <h1>{{tour.name}} ({{tour.stages.count}} étapes | <span id="distance_{{tour.id}}"></span> km)</h1>
+  </div>
+</section>
+
+<section class="row text-center">
+  <div class="large-12 medium-12 small-12 column">
+      <div class="large-6 column tour-map">
+      {% with id=tour.id|stringformat:"s" %}
+      {% with mapid="map-"|add:id %}
+      {% with callback_name="window.map_init_basic_"|add:id %}
+          {% leaflet_map mapid callback=callback_name%}
+      {% endwith %}
+      {% endwith %}
+      {% endwith %}
+      </div>
+      <div class="large-6 column">
+            {% with gallery=tour.gallery %}
+            {% include "image_gallery/partials/gallery.html" %}
+            {% endwith %}
+      </div>
+  </div>
+  <div class="large-12 medium-12 small-12 column">
+      <div class="large-6 medium-6 small-12 column text-justify">
+        <h3>Lieux et Dates : </h3>
+        <div class="large-6 column">
+            {% with step=tour.stages.count|div:2 %}
+            {% for stage in tour.stages.all %}
+              {% if forloop.counter0 == step %}
+              </div><div class="large-6 column">
+              {% endif %}
+              <p>{{stage.name}} : {{stage.begin_date}}</p>
+            {% endfor %}
+             {% endwith %}
+        </div>
+      </div>
+
+      <div class="large-6 column">
+            <h3>Activités proposées : </h3>
+            {{tour.desc|safe}}
+      </div>
+  </div>
+</section>
+{% endblock %}
+{% block extra_script %}
+<script type="text/javascript">
+    {% include 'tour_mgmt/map_init_callback.js' %}
+</script>
+{% endblock extra_script %}
