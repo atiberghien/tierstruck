@@ -146,6 +146,7 @@ CMS_TEMPLATES = (
     ('tierstruck_lozere.html', 'Gabarit TiersTruck_lozere'),
     ('tierstrucker.html', 'Gabarit TiersTrucker'),
     ('3_col.html', '3 colonnes'),
+    ('2_col.html', '2 colonnes'),
 )
 
 CMS_PERMISSION = True
