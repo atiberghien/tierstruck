@@ -6,13 +6,16 @@ footer {
   .p-footer {
     color: white;
   }
+
+  a {
+      color: white;
+  }
   a:hover {
       color: #e4e3e5;
   }
 
   ul {
-      a {
-          color: white;
+     .fa {
           font-size: 2em;
     }
   }
