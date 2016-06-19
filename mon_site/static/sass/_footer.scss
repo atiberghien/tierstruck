@@ -2,15 +2,19 @@ footer {
   margin-top: 3rem;
   background-color: #3e4144;
   padding: 1rem;
+
   .p-footer {
     color: white;
   }
-  a {
-    color: white;
-    font-size: 2em;
-  }
   a:hover {
-    color: #e4e3e5;
+      color: #e4e3e5;
+  }
+
+  ul {
+      a {
+          color: white;
+          font-size: 2em;
+    }
   }
   img{
     height:1em;

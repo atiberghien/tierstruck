@@ -17,6 +17,12 @@ p, h1, h2, h3, a {
   font-family: $font-tierstruck;
 }
 
+p {
+    a {
+        text-decoration: underline;
+    }
+}
+
 h1 {
   font-size: 3rem;
 }
